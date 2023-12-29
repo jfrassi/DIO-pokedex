@@ -1,8 +1,4 @@
 
-const offset = 0
-const limit = 10
-const url = `https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`
-
 function pokemonToLi (pokemon) {
     return ` 
     <li class="pokemon">
@@ -15,7 +11,8 @@ function pokemonToLi (pokemon) {
                 <li class="type">poison</li>
             </ol>
 
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name}">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+              alt="${pokemon.name}">
         </div>      
     </li>`
 }
@@ -25,3 +22,4 @@ const pokemonList = document.getElementById('pokemonList')
 pokeApi.getPokemons().then((pokemons = [] ) => {     
     pokemonList.innerHTML += pokemons.map(pokemonToLi).join('')
     })
+  

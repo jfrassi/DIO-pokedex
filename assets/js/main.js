@@ -24,16 +24,4 @@ const pokemonList = document.getElementById('pokemonList')
 
 pokeApi.getPokemons().then((pokemons = [] ) => {     
     pokemonList.innerHTML += pokemons.map(pokemonToLi).join('')
-
-
-
-    //    const listItems = []
-    
-    //    for (let i = 0; i < pokemons.length; i++) {
-   //         const pokemon = pokemons[i];
-    //        listItems.push(pokemonToLi(pokemon))
-    //    }
-
-     //   console.log(listItems);
-
     })
